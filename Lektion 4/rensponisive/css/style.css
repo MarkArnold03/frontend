@@ -1,0 +1,32 @@
+.box {
+    border: 1px solid lightgray;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+} 
+/*tablets (720p)*/
+@media (min-width: 768) {
+    
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/*)*/
+@media (min-width: 992) {
+    
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width:1200px ) {
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

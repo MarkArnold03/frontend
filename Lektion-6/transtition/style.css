@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: 1px solid lightgray;
+    background-color: bisque;
+    transition: all 1s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 50%;
+}
+.box:hover{
+    background-color: black;
+    color: aliceblue;
+    transform: rotate(360deg);
+}

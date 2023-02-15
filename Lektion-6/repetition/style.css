@@ -1,0 +1,28 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+    border: 1px solid darkgray;
+}
+
+#grandparent{
+    border: 1px solid darkgray;
+    margin: 20px;
+}
+
+#parent{
+    border: 1px solid darkgray;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+}
+
+#child{
+    position: static;
+    position: relative;
+    position: absolute;
+
+    left: 10px;
+    top: 10px;
+}
