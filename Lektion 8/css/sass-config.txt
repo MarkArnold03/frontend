@@ -1,0 +1,13 @@
+   Detta ska läggas i i settings.json (file -> Preferences settings extensions)
+   
+   
+   "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false
