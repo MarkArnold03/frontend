@@ -11,27 +11,27 @@ $minmaxwidth-xxl: 1320px;
 $minmaxwidth-xxxl: 1680px;
 
 @mixin md {
-    @media(min-width: $maxwidth-md) {
+    @media (min-width: $minmaxwidth-md) {
         @content
     }
 }
 @mixin lg {
-    @media(min-width: $maxwidth-lg) {
+    @media (min-width: $minmaxwidth-lg) {
         @content
     }
 }
 @mixin xl {
-    @media(min-width: $maxwidth-xl) {
+    @media (min-width: $minmaxwidth-xl) {
         @content
     }
 }
 @mixin xxl {
-    @media(min-width: $maxwidth-xxl) {
+    @media (min-width: $minmaxwidth-xxl) {
         @content
     }
-} 
+}
 @mixin xxxl {
-    @media(min-width: $maxwidth-xxxl) {
+    @media (min-width: $minmaxwidth-xxxl) {
         @content
     }
 }
