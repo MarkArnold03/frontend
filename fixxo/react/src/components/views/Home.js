@@ -1,26 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useProductContext } from '../../contexts/ProductContext'
 import CollectionGrid from '../partials/CollectionGrid'
 import Header from '../partials/Header'
 import Showcase from '../partials/Showcase'
 
 const Home = () => {
-  const {getFeaturedAsync, getLatestAsync, GetPopularAsync} = useProductContext()
+  const { featured, latest, popular, getFeaturedAsync, getLatestAsync, getPopularAsync } = useProductContext()
 
-    useEffect(() => {
-    
-    
-      return () => {
-        
-      }
-    }, [])
-    
+  useEffect(() => {
+    getFeaturedAsync()
+    getLatestAsync()
+    getPopularAsync()
+  }, [])
 
   return (
     <>
         <Header />
         <Showcase />
-        <CollectionGrid title="Featured Products" />
+        <CollectionGrid title="Featured Products" items={featured} />
+        <CollectionGrid title="New Products" items={latest} />
+        <CollectionGrid title="Popular Products" items={popular} />
     </>
   )
 }

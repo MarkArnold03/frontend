@@ -1,0 +1,128 @@
+.middlecase {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  height: 300px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid black;
+  box-sizing: border-box;
+
+
+
+  .box {
+    display: grid;
+    
+    align-items: center;
+    height: 100%;
+    width: 300%;
+    overflow: hidden;
+
+    background-color: transparent;
+    // border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    
+
+    @include md {
+      grid-template-columns: 1fr ;
+    }
+
+    @include lg {
+      grid-template-columns: 1fr 1fr ;
+    }
+
+    @include xxl {
+      grid-template-columns: 1fr 1fr 1fr ;
+    }
+  }
+
+  .box-1 {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #6ac7ec;
+    color: #fff;
+
+  }
+
+  .box-2 {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffce67;
+    color: #fff;
+    position: relative;
+  }
+
+  .box-3 {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e29dc1;
+    color: #fff;
+    .box-image {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      position: relative;
+      z-index: 1;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+  }
+  .box-content {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .box-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .shop-button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .shop-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .box2 .flash-sale-button {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .box2 .flash-sale-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+}

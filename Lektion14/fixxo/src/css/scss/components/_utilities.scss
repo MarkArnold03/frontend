@@ -1,0 +1,39 @@
+html, body {
+    @include default-font;
+    @include default-colors;
+}
+
+.hide {
+    display: none;
+}
+
+.menu-badge {
+    @include theme-colors;
+    @include content-center;
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+#top-arrow {
+    display: none;
+    background-color: #fff;
+    color: #222529;
+    border: 1px solid #222529;
+    position: fixed;
+    right: 45px;
+    bottom: 50px;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    border-radius: 50%;
+    transition: background-color .25s, color .15s
+}
+
+#top-arrow:hover {
+    background-color: #222529;
+    color: #f5f5f5;
+    border: 1px solid #222529
+}

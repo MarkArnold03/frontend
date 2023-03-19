@@ -6,36 +6,36 @@ export const useProductContext = () => {
     return useContext(ProductContext)
 }
 
-export const ProductProvider = ({children}) =>{
-    const [apiUrl, setApiUrl] = "https://kyh-net22.azurewebsites.net/api/products"
-    cons[all,setAll] = useState([])
-    cons[featured,setFeatured] = useState([])
-    cons[latest,setLatest] = useState([])
-    cons[pouplar,setPopular] = useState([])
-    cons[product,setProduct] = useState({})
+export const ProductProvider = ({children}) => {
+    const [apiUrl, setApiUrl] = useState("https://kyh-net22.azurewebsites.net/api/products")
+    const [all, setAll] = useState([])
+    const [featured, setFeatured] = useState([])
+    const [latest, setLatest] = useState([])
+    const [popular, setPopular] = useState([])
+    const [product, setProduct] = useState({})
 
     const getAllAsync = async () => {
-        const re = await fetch (`${apiUrl}`)
-        setAll(await resizeBy.json())
+        const res = await fetch(`${apiUrl}`)
+        setAll(await res.json())
     }
     const getFeaturedAsync = async () => {
-        const re = await fetch (`${apiUrl}/featured`)
-        setFeatured(await re.json())
+        const res = await fetch(`${apiUrl}/featured`)
+        setFeatured(await res.json())
     }
     const getLatestAsync = async () => {
-        const re = await fetch (`${apiUrl}/new`)
-        setLatest(await re.json())
+        const res = await fetch(`${apiUrl}/new`)
+        setLatest(await res.json())
     }
     const getPopularAsync = async () => {
-        const re = await fetch (`${apiUrl}/popular`)
+        const res = await fetch(`${apiUrl}/popular`)
         setPopular(await res.json())
     }
-    const getProductAsync = async () => {
-        const re = await fetch (`${apiUrl}/${id}`)
-        setAll(await re.json())
+    const getProductAsync = async (id) => {
+        const res = await fetch(`${apiUrl}/${id}`)
+        setProduct(await res.json())
     }
 
-    return <ProductContext.Provider value={{all,featured,latest,pouplar,product,getAllAsync,getFeaturedAsync,getLatestAsync,getPopularAsync,getProductAsync}}>
+    return <ProductContext.Provider value={{all, featured, latest, popular, product, getAllAsync, getFeaturedAsync, getLatestAsync, getPopularAsync, getProductAsync}}>
         {children}
     </ProductContext.Provider>
 }

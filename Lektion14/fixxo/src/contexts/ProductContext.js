@@ -7,11 +7,12 @@ export const useProductContext = () => {
 }
 
 export const ProductProvider = ({children}) => {
-    const apiUrl = "https://kyh-net22.azurewebsites.net/api/products"
+    const [apiUrl, setApiUrl] = useState("https://kyh-net22.azurewebsites.net/api/products")
     const [all, setAll] = useState([])
     const [featured, setFeatured] = useState([])
     const [latest, setLatest] = useState([])
     const [popular, setPopular] = useState([])
+    const [product, setProduct] = useState({})
 
     const getAllAsync = async () => {
         const res = await fetch(`${apiUrl}`)
@@ -29,9 +30,12 @@ export const ProductProvider = ({children}) => {
         const res = await fetch(`${apiUrl}/popular`)
         setPopular(await res.json())
     }
+    const getProductAsync = async (id) => {
+        const res = await fetch(`${apiUrl}/${id}`)
+        setProduct(await res.json())
+    }
 
-    return <ProductContext.Provider value={{all, featured, latest, popular, getAllAsync, getFeaturedAsync, getLatestAsync, getPopularAsync}}>
+    return <ProductContext.Provider value={{all, featured, latest, popular, product, getAllAsync, getFeaturedAsync, getLatestAsync, getPopularAsync, getProductAsync}}>
         {children}
     </ProductContext.Provider>
-
 }
