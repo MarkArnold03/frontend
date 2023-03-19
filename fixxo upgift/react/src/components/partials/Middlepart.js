@@ -1,6 +1,6 @@
 import React from 'react'
 import partyImage from '../../assets/images/products/black-coat.png'
-import officeImage from '../../assets/images/products/black-coat.png'
+import officeImage from '../../assets/images/products/'
 const Middlepart = () => {
     return (
         <section className="middlecase">

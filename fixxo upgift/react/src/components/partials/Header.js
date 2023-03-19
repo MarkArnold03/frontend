@@ -18,8 +18,8 @@ const Header = () => {
           <nav id="menu-icons" className="icons">
             <NavLink className="link" to="/search"><i className="fa-regular fa-search"></i></NavLink>
             <NavLink className="link" to="/compare"><i className="fa-regular fa-code-compare"></i></NavLink>
-            <NavLink className="link" to="/favorites"><i className="fa-regular fa-heart"></i></NavLink>
-            <NavLink className="link" to="/cart"><i className="fa-regular fa-bag-shopping"></i></NavLink>
+            <NavLink className="link" to="/favorites"><i className="fa-regular fa-heart"></i><span class="menu-badge">12</span></NavLink>
+            <NavLink className="link" to="/cart"><i className="fa-regular fa-bag-shopping"></i><span class="menu-badge">12</span></NavLink>
             <NavLink className="link ms-5" to="/account"><i className="fa-regular fa-user"></i></NavLink>
           </nav>
         </div>
