@@ -21,9 +21,11 @@ const Home = () => {
         <Showcase />
         <CollectionGrid title="Featured Products" items={featured} />
         <Middlepart />
+        
         <CollectionGrid title="New Products" items={latest} />
         <CollectionGrid title="Popular Products" items={popular} />
         <Footer />
+        
     </>
   )
 }
