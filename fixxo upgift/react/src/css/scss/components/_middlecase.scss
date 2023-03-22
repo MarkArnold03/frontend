@@ -1,12 +1,21 @@
 .middlecase {
 
   .box {
+    // border: 2px solid black;
     display: grid;
-    grid-template-areas: "box2";
+    grid-template-areas: "box3";
     grid-template-columns: 1fr;
     height: auto;
     gap: 20px;
-
+    @include md {
+      
+      grid-template-areas: "box1 box2";
+      grid-template-columns:  1fr 1fr;
+    }
+    @include lg {
+      grid-template-areas: "box1 box2";
+      grid-template-columns: 1fr 1fr ;
+    }
     @include xl {
       grid-template-areas: "box1 box2";
       grid-template-columns: 1fr 1fr;
@@ -22,31 +31,50 @@
     }
 
     .box-1 {
+      // border: 2px solid black;
       grid-area: box1;
       display: none;
 
       @include xl {
         display: block;
       }
+      @include lg {
+        display: block;
+      }
+      @include md {
+        display: block;
+      }
 
       img {
         width: 100%;
-        height: 1000px;
+       
        
       }
     }
 
     .box-2 {
+      // border: 2px solid black;
       grid-area: box2;
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: center;
-      height: 100%;
+      height: auto;
       width: 100%;
-      background-color: gray;
+      background-color: $color-light-3;;
       outline: 10px solid $color-theme;
       outline-offset: -20px;
       
+      @include xl {
+        display: flex;
+        height: auto;
+        width: 100%;
+      }
+      
+      @include md {
+        display: flex;
+        height: auto;
+        width: 100%;
+      }
 
       .content {
         display: flex;
@@ -105,6 +133,7 @@
     }
 
     .box-3 {
+      // border: 2px solid black;
       grid-area: box3;
       display: none;
       
@@ -116,7 +145,6 @@
 
       img {
         width: 100%;
-        height: 1000px;
        
       }
     }
