@@ -3,6 +3,7 @@ import ContactForm from '../forms/ContactForm'
 import Breadcrumb from '../partials/Breadcrumb'
 import GoogleMaps from '../partials/GoogleMaps'
 import Header from '../partials/Header'
+import Footer from '../partials/Footer'
 
 const Contacts = () => {
   return (
@@ -11,6 +12,7 @@ const Contacts = () => {
       <Breadcrumb currentPage="Contacts" />
       <GoogleMaps />
       <ContactForm />
+      <Footer />
     </>
   )
 }

@@ -1,0 +1,74 @@
+.end-part {
+    margin-top: 100px;
+    @include content-center;
+
+    .container {
+        
+        @include lg {
+            border-top: solid rgb(213, 216, 218);
+            margin-bottom: 2em;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .icons{
+            @include content-center;
+            align-items:baseline;
+              
+            .link {
+                position: relative;
+                height: 25px;
+                width: 25px;
+                font-size: 0.8em;
+                @include content-center;
+                @include default-colors;
+                border-radius: 50%;
+                text-decoration: none;
+                box-shadow: 0 4px 0px 0px $color-shadow-1;
+                transition: background-color 0.25s, color 0.20s;
+        
+                &:hover,
+                &.active {
+                    @include dark-colors;
+                    text-decoration: none;
+                }
+                @include lg {
+                    height: 50px;
+                    width: 50px;
+                    font-size: 1.2em;
+                }
+            }
+            .myframe{
+                flex-direction: column;
+                @include content-center;
+            
+                 
+                .minititle-1 {
+                    @include  mini-font-title-5;
+                    @include content-center;
+                    text-align: center;
+                    margin: 1em;
+                }
+                .minititle-2 {
+                    @include  mini-font-title-6;
+                }
+                @include lg {
+                    margin-top: 1em;
+                    .minititle-1 {
+                        @include font-title-6;
+                       
+                    }
+                    .minititle-2 {
+                        @include   mini-font-title-7;
+                        margin-left: 3em;
+                        margin-right: 3em;
+                        text-align: center;
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+
+}

@@ -10,6 +10,7 @@ const CollectionCard = ({ item }) => {
                 <img src={item.imageUrl} alt={item.name} />
                 <div className="product-card">
                     <nav className="icons">
+                        <a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a>
                         <a className="link" href="#"><i className="fa-regular fa-heart"></i></a>
                         <a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i></a>
                     </nav>

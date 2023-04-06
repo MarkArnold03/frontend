@@ -1,0 +1,62 @@
+.latestproducts {
+    background-color: transparent;
+
+   
+    .latestcontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "column1"
+                             "column2";
+                             gap: 1em;
+        @include lg {
+            grid-template-columns: 1fr 1fr ;
+            grid-template-areas: "column1 column2";
+        }
+    
+        .column-1 {
+            grid-area: column1;
+            @include content-center;
+            padding: 4rem;
+            margin-left: 0;
+            margin-bottom: 1em;
+            background-color: lightgray;
+            .content {    
+                text-align: center;     
+            }
+            @include lg {
+                .title-1 {
+                    @include font-title-1;
+                }
+                .title-2 {
+                    @include font-title-2;
+                }
+                .title-3 {
+                    @include font-title-3;
+                }
+            }
+        }
+        .column-2 {
+            .product-grid { 
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;    
+                .product-card  {
+                    margin: 0;
+                 }
+                 @include md{
+                    grid-template-columns: 1fr 1fr ;
+                   
+                    
+                 }
+                 
+                 @include xl {
+                    grid-template-columns: 1fr 1fr 1fr ;
+                    margin-right: 6em;
+                   
+                 }
+
+        }
+        }
+    } 
+      
+}

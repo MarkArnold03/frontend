@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useProductContext } from '../../contexts/ProductContext'
 import CollectionGrid from '../partials/CollectionGrid'
+import EndPart from '../partials/EndPart'
 import Footer from '../partials/Footer'
 import Header from '../partials/Header'
 import Middlepart from '../partials/Middlepart'
@@ -19,11 +20,11 @@ const Home = () => {
     <>
         <Header />
         <Showcase />
-        <CollectionGrid title="Featured Products" items={featured} />
+        <CollectionGrid title="Featured Products" />
         <Middlepart />
-        
-        <CollectionGrid title="New Products" items={latest} />
-        <CollectionGrid title="Popular Products" items={popular} />
+        <LatestProducts title="New Products" />
+        <PopularProducts title="Popular Products"/>
+        <EndPart />
         <Footer />
         
     </>
